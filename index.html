@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ravintola1 — Italialainen keittiö, pizzaa & avoin buffet</title>
+<meta name="description" content="Ravintola1 — aitoa italialaista ruokaa, käsintehtyä pizzaa ja runsas avoin buffet. Tervetuloa nauttimaan!">
+<meta name="theme-color" content="#1a0e0a">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="site-header" id="header">
+  <div class="container nav">
+    <a href="#etusivu" class="logo">
+      <span class="logo__mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 11h18l-2 8a2 2 0 0 1-2 1.7H7A2 2 0 0 1 5 19z"/>
+          <path d="M8 11V7a4 4 0 0 1 8 0v4"/>
+        </svg>
+      </span>
+      <span>Ravintola<b>1</b></span>
+    </a>
+
+    <nav>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#meista">Meistä</a></li>
+        <li><a href="#buffet">Buffet</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#keittiö">Keittiö</a></li>
+        <li><a href="#arvostelut">Arvostelut</a></li>
+        <li><a href="#varaus">Varaus</a></li>
+        <li class="nav__links-cta"><a href="#varaus" class="btn btn--gold">Varaa pöytä</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav__right">
+      <a href="#varaus" class="btn btn--gold nav__cta">Varaa pöytä</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Avaa valikko" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════════════ HERO ══════════════════ -->
+<section class="hero" id="etusivu">
+  <div class="hero__media">
+    <video class="hero__video" autoplay muted loop playsinline preload="auto"
+           poster="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1920&q=80">
+      
+      <!-- 1) فيديوك المحلي (الأولوية القصوى) -->
+      <source src="ravintola.mp4" type="video/mp4">
+      
+      <!-- 2) فيديوهات طبخ احتياطية إذا فشل المحلي -->
+      <source src="https://assets.mixkit.co/videos/preview/mixkit-chef-preparing-a-dish-in-a-restaurant-kitchen-42832-large.mp4" type="video/mp4">
+      <source src="https://assets.mixkit.co/videos/preview/mixkit-pizza-being-prepared-with-fresh-ingredients-42814-large.mp4" type="video/mp4">
+      <source src="https://assets.mixkit.co/videos/preview/mixkit-chef-cooking-with-a-pan-in-the-kitchen-42831-large.mp4" type="video/mp4">
+    </video>
+    <div class="hero__scrim"></div>
+    <div class="hero__pattern"></div>
+  </div>
+
+  <div class="container hero__inner">
+    <span class="hero__badge">
+      <span class="dot"></span>
+      Aito italialainen keittiö vuodesta 2012
+    </span>
+
+    <h1 class="hero__title">
+      Ruokaa, joka<br>
+      <span>kokoaa pöytään.</span>
+    </h1>
+
+    <p class="hero__text">
+      Käsintehtyä pizzaa kiviuunista, tuoreita raaka-aineita ja
+      runsas avoin buffet joka päivä. Ravintola1 on paikka, jossa
+      jokainen löytää oman suosikkinsa — perhe, ystävät ja kollegat.
+    </p>
+
+    <div class="hero__actions">
+      <a href="#varaus" class="btn btn--gold">
+        Varaa pöytä nyt
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="#menu" class="btn btn--outline">
+        Katso menu
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </a>
+    </div>
+
+    <ul class="hero__stats">
+      <li><strong data-count="12" data-suffix=" v">0</strong><span>Kokemusta alalta</span></li>
+      <li><strong data-count="45" data-suffix="+">0</strong><span>Annosvaihtoehtoa</span></li>
+      <li><strong data-count="850" data-suffix="°C">0</strong><span>Kiviuunin lämpö</span></li>
+      <li><strong data-count="4.8">0</strong><span>Asiakasarvosana</span></li>
+    </ul>
+  </div>
+
+  <div class="hero__scroll">
+    <span>Vieritä</span>
+    <span class="hero__scroll-line"></span>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section about" id="meista">
+  <div class="container about__grid">
+    <div class="about__media reveal">
+      <div class="about__frame">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1100&q=80" 
+             alt="Ravintola1 tunnelma" loading="lazy">
+      </div>
+      <div class="about__float">
+        <div class="about__float-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2l3.1 6.3L22 9.3l-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/>
+          </svg>
+        </div>
+        <div>
+          <strong>Michelin-taso</strong>
+          <span>Laatukeittiö</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="about__content reveal">
+      <span class="eyebrow">Meistä</span>
+      <h2>Perheyritys, jossa ruoka on rakkaus</h2>
+      <p class="about__lead">
+        Ravintola1 syntyi vuonna 2012, kun <strong>Marco ja Elena Rossi</strong> toivat
+        Napolin sydämestä Helsinkiin aidon italialaisen ruokakulttuurin — ei kiirettä,
+        ei oikoteitä, vain tuoreita raaka-aineita ja intohimoa.
+      </p>
+      <p class="about__text">
+        Kaksitoista vuotta myöhemmin Ravintola1 on pääkaupunkiseudun suosituimpia
+        ruokapaikkoja. Yli 40 000 asiakasta vuodessa nauttii kiviuunissamme paistetusta
+        pizzasta, käsintehdystä pastasta ja runsaasta buffet-pöydästä. Jokainen annos
+        valmistetaan alusta asti — koska laatu ei koskaan ole sattumaa.
+      </p>
+
+      <ul class="about__checks">
+        <li>
+          <span class="about__check">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          </span>
+          Kiviuuni 850 °C — rapea pohja joka kerta
+        </li>
+        <li>
+          <span class="about__check">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          </span>
+          Tuoreet raaka-aineet suoraan Italiasta
+        </li>
+        <li>
+          <span class="about__check">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          </span>
+          Käsintehty pasta ja pizza joka päivä
+        </li>
+      </ul>
+
+      <a href="#menu" class="btn btn--gold">
+        Tutustu menuun
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- BUFFET — TÄHTITUOTE -->
+<section class="section buffet" id="buffet">
+  <div class="container">
+    <div class="section__head section__head--center reveal">
+      <span class="eyebrow">Avoin buffet</span>
+      <h2>Runsas buffet joka päivä</h2>
+      <p>Yli 30 vaihtuvaa annosta — alkuruoista jälkiruokiin. Syö niin paljon kuin jaksat.</p>
+    </div>
+
+    <div class="buffet__grid">
+      <div class="buffet__card reveal">
+        <div class="buffet__time">
+          <span class="buffet__time-icon">🍽️</span>
+          <span class="buffet__time-label">Arkisin</span>
+        </div>
+        <div class="buffet__hours">11:00 – 15:00</div>
+        <div class="buffet__price">14,90 €<small>/hlö</small></div>
+        <p class="buffet__note">Sisältää salaattipöydän, lämpimät ruoat ja jälkiruoan</p>
+      </div>
+
+      <div class="buffet__card buffet__card--featured reveal">
+        <span class="buffet__badge">Suosituin</span>
+        <div class="buffet__time">
+          <span class="buffet__time-icon">🌿</span>
+          <span class="buffet__time-label">Viikonloppuisin</span>
+        </div>
+        <div class="buffet__hours">12:00 – 16:00</div>
+        <div class="buffet__price">18,90 €<small>/hlö</small></div>
+        <p class="buffet__note">Laajennettu buffet + jälkiruokapöytä + kahvi</p>
+      </div>
+
+      <div class="buffet__card reveal">
+        <div class="buffet__time">
+          <span class="buffet__time-icon">👶</span>
+          <span class="buffet__time-label">Lapset (4–12 v)</span>
+        </div>
+        <div class="buffet__hours">Aina saatavilla</div>
+        <div class="buffet__price">7,90 €<small>/lapsi</small></div>
+        <p class="buffet__note">Alle 4-vuotiaat ilmaiseksi vanhemman seurassa</p>
+      </div>
+    </div>
+
+    <div class="buffet__features reveal">
+      <div class="buffet__feature">
+        <span class="buffet__feature-num">30+</span>
+        <span class="buffet__feature-label">Annosvaihtoehtoa</span>
+      </div>
+      <div class="buffet__feature">
+        <span class="buffet__feature-num">5</span>
+        <span class="buffet__feature-label">Kasvisvaihtoehtoa</span>
+      </div>
+      <div class="buffet__feature">
+        <span class="buffet__feature-num">∞</span>
+        <span class="buffet__feature-label">Lisää lautaselle</span>
+      </div>
+      <div class="buffet__feature">
+        <span class="buffet__feature-num">0 €</span>
+        <span class="buffet__feature-label">Piilokuluja</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU TABS -->
+<section class="section menu" id="menu">
+  <div class="container">
+    <div class="section__head section__head--center reveal">
+      <span class="eyebrow">Menu</span>
+      <h2>Jokaiselle jotakin</h2>
+      <p>Valitse kategoria ja löydä uusi suosikkisi. Kaikki annokset valmistetaan tuoreista raaka-aineista.</p>
+    </div>
+
+    <div class="menu__tabs reveal" role="tablist">
+      <button class="menu__tab active" data-tab="pizzat">🍕 Pizzat</button>
+      <button class="menu__tab" data-tab="paaruoat">🍝 Pääruoat</button>
+      <button class="menu__tab" data-tab="alkuruoat">🥗 Alkuruoat</button>
+      <button class="menu__tab" data-tab="jalkiruo&lt;at">🍰 Jälkiruoat</button>
+    </div>
+
+    <div class="menu__panels reveal">
+
+      <div class="menu__panel active" id="pizzat">
+        <div class="menu__item">
+          <div class="menu__item-head">
+            <h3>Margherita</h3>
+            <span class="menu__price">12,90 €</span>
+          </div>
+          <p>Tomaattikastike, mozzarella, tuore basilika, oliiviöljy</p>
+          <span class="menu__tag">Klassikko</span>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-head">
+            <h3>Diavola</h3>
+            <span class="menu__price">14,90 €</span>
+          </div>
+          <p>Tomaatti, mozzarella, tulinen salami, chili, oregano</p>
+          <span class="menu__tag menu__tag--spicy">Tulinen</span>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-head">
+            <h3>Quattro Formaggi</h3>
+            <span class="menu__price">15,90 €</span>
+          </div>
+          <p>Neljä juustoa: mozzarella, gorgonzola, parmesan, provolone</p>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-head">
+            <h3>Prosciutto e Rucola</h3>
+            <span class="menu__price">16,90 €</span>
+          </div>
+          <p>Parmankinkku, rucola, parmesan, tomaatti, mozzarella</p>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-head">
+            <h3>Vegetariana</h3>
+            <span class="menu__price">13,90 €</span>
+          </div>
+          <p>Grillatut vihannekset, paprika, sipuli, oliivit, feta</p>
+          <span class="menu__tag menu__tag--veg">Kasvis</span>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-head">
+            <h3>Kebab Pizza</h3>
+            <span class="menu__price">15,90 €</span>
+          </div>
+          <p>Kebab, mozzarella, tomaatti, punasipuli, valkosipulikastike</p>
+        </div>
+      </div>
+
+      <div class="menu__panel" id="paaruoat">
+        <div class="menu__item">
+          <div class="menu__item-head">
+            <h3>Pasta Carbonara</h3>
+            <span class="menu__price">16,90 €</span>
+          </div>
+          <p>Guanciale, kananmuna, pecorino, mustapippuri — alkuperäinen resepti</p>
+          <span class="menu__tag">Klassikko</span>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-head">
+            <h3>Lasagne della Nonna</h3>
+            <span class="menu__price">17,90 €</span>
+          </div>
+          <p>Käsintehty lasagne, naudanlihakastike, bechamel, parmesan</p>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-head">
+            <h3>Grillattu lohi</h3>
+            <span class="menu__price">22,90 €</span>
+          </div>
+          <p>Lohifilee, sitruunavoi, grillatut vihannekset, perunamuusi</p>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-head">
+            <h3>Naudan sisäfilee</h3>
+            <span class="menu__price">29,90 €</span>
+          </div>
+          <p>200 g sisäfileetä, punaviinikastike, ranskalaiset, salaat</p>
+          <span class="menu__tag menu__tag--premium">Premium</span>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-head">
+            <h3>Kana-riisit currykastikkeessa</h3>
+            <span class="menu__price">18,90 €</span>
+          </div>
+          <p>Grillattua kanaa, kookoscurrya, jasmiiniriisiä, korianteria</p>
+        </div>
+      </div>
+
+      <div class="menu__panel" id="alkuruoat">
+        <div class="menu__item">
+          <div class="menu__item-head">
+            <h3>Bruschetta al Pomodoro</h3>
+            <span class="menu__price">8,90 €</span>
+          </div>
+          <p>Grillattua leipää, tuoreita tomaatteja, valkosipulia, basilikaa</p>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-head">
+            <h3>Caprese-salaatti</h3>
+            <span class="menu__price">10,90 €</span>
+          </div>
+          <p>Buffalo mozzarella, tuoreita tomaatteja, basilikaa, balsamicoa</p>
+          <span class="menu__tag menu__tag--veg">Kasvis</span>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-head">
+            <h3>Zuppa Toscana</h3>
+            <span class="menu__price">9,90 €</span>
+          </div>
+          <p>Toscanalainen papukeitto, pancetta, tuoretta leipää</p>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-head">
+            <h3>Antipasto Misto</h3>
+            <span class="menu__price">14,90 €</span>
+          </div>
+          <p>Valikoima italialaisia leikkeleitä, juustoja ja oliiveja</p>
+        </div>
+      </div>
+
+      <div class="menu__panel" id="jalkiruo&lt;at">
+        <div class="menu__item">
+          <div class="menu__item-head">
+            <h3>Tiramisù</h3>
+            <span class="menu__price">7,90 €</span>
+          </div>
+          <p>Klassinen italialainen jälkiruoka mascarpone-kerroksilla</p>
+          <span class="menu__tag">Suosikki</span>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-head">
+            <h3>Panna Cotta</h3>
+            <span class="menu__price">7,50 €</span>
+          </div>
+          <p>Vaniljapannacotta, marjakastike, tuoreita marjoja</p>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-head">
+            <h3>Gelato Trio</h3>
+            <span class="menu__price">6,90 €</span>
+          </div>
+          <p>Kolme palloa italialaista jäätelöä, koristelu</p>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item-head">
+            <h3>Cannoli Siciliani</h3>
+            <span class="menu__price">8,50 €</span>
+          </div>
+          <p>Sisilialainen ricotta-cannoli, pistaasi, tomusokeri</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- KITCHEN TEAM -->
+<section class="section kitchen" id="keittiö">
+  <div class="container">
+    <div class="section__head section__head--center reveal">
+      <span class="eyebrow">Keittiömme</span>
+      <h2>Mestarit liesien takana</h2>
+      <p>Jokainen annos on käsityötä — alusta loppuun.</p>
+    </div>
+
+    <div class="kitchen__grid">
+      <article class="chef-card reveal">
+        <div class="chef-card__photo">
+          <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?auto=format&fit=crop&w=600&q=80" 
+               alt="Marco Rossi" loading="lazy">
+        </div>
+        <div class="chef-card__body">
+          <h3>Marco Rossi</h3>
+          <span class="chef-card__role">Pääkokki &amp; omistaja</span>
+          <p>Napolilainen pizzamestari 3. sukupolvessa. Toi perheensä reseptit Suomeen.</p>
+          <div class="chef-card__badges">
+            <span>🍕 Pizza</span><span>🍝 Pasta</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="chef-card reveal">
+        <div class="chef-card__photo">
+          <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=600&q=80" 
+               alt="Elena Rossi" loading="lazy">
+        </div>
+        <div class="chef-card__body">
+          <h3>Elena Rossi</h3>
+          <span class="chef-card__role">Keittiöpäällikkö</span>
+          <p>Vastaa buffet-pöydästä ja jälkiruoista. Italialaisen keittiön sydän.</p>
+          <div class="chef-card__badges">
+            <span>🍰 Jälkiruoat</span><span>🥗 Buffet</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="chef-card reveal">
+        <div class="chef-card__photo">
+          <img src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?auto=format&fit=crop&w=600&q=80" 
+               alt="Antti Virtanen — sous-chef" loading="lazy">
+        </div>
+        <div class="chef-card__body">
+          <h3>Antti Virtanen</h3>
+          <span class="chef-card__role">Sous-chef</span>
+          <p>Vastaa lämpimistä ruoista ja liha-annoksista. 8 vuoden kokemus.</p>
+          <div class="chef-card__badges">
+            <span>🥩 Liha</span><span>🐟 Kala</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section testimonials" id="arvostelut">
+  <div class="container">
+    <div class="section__head section__head--center reveal">
+      <span class="eyebrow">Asiakkaiden kokemukset</span>
+      <h2>Mitä vieraamme sanovat</h2>
+    </div>
+
+    <div class="slider reveal" id="slider">
+      <div class="slider__viewport">
+        <div class="slider__track" id="sliderTrack">
+          <div class="slide">
+            <div class="slide__card">
+              <div class="slide__stars">★★★★★</div>
+              <p class="slide__quote">Buffet on aivan uskomaton! Neljä ruokalajia, tuoreita raaka-aineita ja aivan liian hyvää jälkiruokaa. Tulemme varmasti uudelleen.</p>
+              <div class="slide__author">
+                <div class="slide__avatar">MK</div>
+                <div>
+                  <strong>Mikko K.</strong>
+                  <span>Helsinki</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide__card">
+              <div class="slide__stars">★★★★★</div>
+              <p class="slide__quote">Paras pizza, mitä olen Suomessa syönyt. Pohja on täydellisen rapea ja täytteet tuoreita. Palvelu erittäin ystävällistä.</p>
+              <div class="slide__author">
+                <div class="slide__avatar">SL</div>
+                <div>
+                  <strong>Sanna L.</strong>
+                  <span>Espoo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide__card">
+              <div class="slide__stars">★★★★★</div>
+              <p class="slide__quote">Varasimme pöydän perheelle ja saimme ihanan illan. Lapset rakastuivat pizzaan, me aikuiset Carbonaraan. Kaikki toimi.</p>
+              <div class="slide__author">
+                <div class="slide__avatar">JK</div>
+                <div>
+                  <strong>Jukka K.</strong>
+                  <span>Vantaa</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slider__nav">
+        <button class="slider__btn" id="prevBtn" aria-label="Edellinen">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>
+        </button>
+        <div class="slider__dots" id="sliderDots"></div>
+        <button class="slider__btn" id="nextBtn" aria-label="Seuraava">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESERVATION -->
+<section class="section reservation" id="varaus">
+  <div class="container">
+    <div class="section__head section__head--center reveal">
+      <span class="eyebrow">Varaus</span>
+      <h2>Varaa pöytä</h2>
+      <p>Täytä lomake ja saat vahvistuksen 2 tunnin sisällä. Tai soita suoraan — vastaamme heti.</p>
+    </div>
+
+    <div class="reservation__grid">
+      <div class="reservation__info reveal">
+        <div class="status" id="status">
+          <span class="status__dot"></span>
+          <span class="status__text">Tarkistetaan…</span>
+        </div>
+
+        <div class="reservation__item">
+          <span class="reservation__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/>
+            </svg>
+          </span>
+          <div>
+            <strong>Puhelin</strong>
+            <a href="tel:+358401234567">+358 40 123 4567</a>
+          </div>
+        </div>
+
+        <div class="reservation__item">
+          <span class="reservation__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+          </span>
+          <div>
+            <strong>Osoite</strong>
+            <span>Keskuskatu 12, 00100 Helsinki</span>
+          </div>
+        </div>
+
+        <div class="hours-list">
+          <div class="hours-list__row"><span>Maanantai – Torstai</span><span>11:00 – 22:00</span></div>
+          <div class="hours-list__row"><span>Perjantai – Lauantai</span><span>11:00 – 23:00</span></div>
+          <div class="hours-list__row"><span>Sunnuntai</span><span>12:00 – 21:00</span></div>
+        </div>
+      </div>
+
+      <div class="form-card reveal">
+        <h3>Tee varaus</h3>
+        <p>Täytä tiedot — vahvistamme 2 tunnin sisällä.</p>
+
+        <form id="reservationForm" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="rname">Nimi *</label>
+              <input type="text" id="rname" name="rname" placeholder="Etunimi Sukunimi" required>
+              <span class="field__err">Syötä nimesi</span>
+            </div>
+            <div class="field">
+              <label for="rphone">Puhelin *</label>
+              <input type="tel" id="rphone" name="rphone" placeholder="040 123 4567" required>
+              <span class="field__err">Syötä puhelinnumero</span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="rdate">Päivämäärä *</label>
+              <input type="date" id="rdate" name="rdate" required>
+              <span class="field__err">Valitse päivämäärä</span>
+            </div>
+            <div class="field">
+              <label for="rtime">Aika *</label>
+              <select id="rtime" name="rtime" required>
+                <option value="">Valitse aika</option>
+                <option>11:00</option><option>12:00</option><option>13:00</option>
+                <option>14:00</option><option>15:00</option><option>16:00</option>
+                <option>17:00</option><option>18:00</option><option>19:00</option>
+                <option>20:00</option><option>21:00</option>
+              </select>
+              <span class="field__err">Valitse aika</span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="rguests">Henkilömäärä *</label>
+              <select id="rguests" name="rguests" required>
+                <option value="">Valitse</option>
+                <option>1 henkilö</option><option>2 henkilöä</option>
+                <option>3 henkilöä</option><option>4 henkilöä</option>
+                <option>5 henkilöä</option><option>6 henkilöä</option>
+                <option>7+ henkilöä</option>
+              </select>
+              <span class="field__err">Valitse henkilömäärä</span>
+            </div>
+            <div class="field">
+              <label for="rphone2">Sähköposti</label>
+              <input type="email" id="rphone2" name="remail" placeholder="nimi@esimerkki.fi">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="rmsg">Lisätietoja</label>
+            <textarea id="rmsg" name="rmsg" placeholder="Allergiat, juhlat, erityistoiveet…"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--gold btn--block">
+            Lähetä varaus
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg>
+          </button>
+
+          <div class="form-success" id="formSuccess">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+            <span>Kiitos! Varauksesi on vastaanotettu. Vahvistamme 2 tunnin sisällä.</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a href="#etusivu" class="logo">
+          <span class="logo__mark">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 11h18l-2 8a2 2 0 0 1-2 1.7H7A2 2 0 0 1 5 19z"/>
+              <path d="M8 11V7a4 4 0 0 1 8 0v4"/>
+            </svg>
+          </span>
+          <span>Ravintola<b>1</b></span>
+        </a>
+        <p class="footer__about">Aitoa italialaista ruokaa, käsintehtyä pizzaa ja runsas buffet. Keskellä Helsinkiä vuodesta 2012.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h3l1-3h-4v-2c0-.6.4-1 1-1z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17 3v3a5 5 0 0 0 4 4v3a8 8 0 0 1-4-1v6a6 6 0 1 1-6-6v3a3 3 0 1 0 3 3V3z"/></svg></a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Menu</h4>
+        <ul>
+          <li><a href="#menu">Pizzat</a></li>
+          <li><a href="#menu">Pääruoat</a></li>
+          <li><a href="#menu">Alkuruoat</a></li>
+          <li><a href="#menu">Jälkiruoat</a></li>
+          <li><a href="#buffet">Buffet</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Tietoa</h4>
+        <ul>
+          <li><a href="#meista">Meistä</a></li>
+          <li><a href="#keittiö">Keittiö</a></li>
+          <li><a href="#arvostelut">Arvostelut</a></li>
+          <li><a href="#varaus">Varaus</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Yhteystiedot</h4>
+        <ul>
+          <li><a href="tel:+358401234567">+358 40 123 4567</a></li>
+          <li><a href="mailto:info@ravintola1.fi">info@ravintola1.fi</a></li>
+          <li><a href="#">Keskuskatu 12, Helsinki</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© <span id="year">2025</span> Ravintola1. Kaikki oikeudet pidätetään.</span>
+      <span>Tietosuoja · Käyttöehdot</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Takaisin ylös">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
